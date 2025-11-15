@@ -74,7 +74,7 @@
       const [burstPattern, setBurstPattern] = useState('explosion');
       const [reverseGravity, setReverseGravity] = useState(false);
       const [particleCount, setParticleCount] = useState(100);
-      const [gravity, setGravity] = useState(0.5);
+      const [gravity, setGravity] = useState(0.3);
       const [spread, setSpread] = useState(8);
       const [showControls, setShowControls] = useState(true);
       const [buttonImage, setButtonImage] = useState('');
@@ -509,13 +509,13 @@
                   
                   <div>
                     <label className="text-sm text-gray-600 mb-2 block">
-                      Gravity: {gravity.toFixed(1)}
+                      Gravity: {gravity.toFixed(2)}
                     </label>
                     <input
                       type="range"
-                      min="0"
+                      min="0.01"
                       max="2"
-                      step="0.1"
+                      step="0.05"
                       value={gravity}
                       onChange={(e) => setGravity(Number(e.target.value))}
                       className="w-full"
